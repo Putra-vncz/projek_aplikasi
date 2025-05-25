@@ -16,9 +16,9 @@
 
         <ImageButton
             android:id="@+id/micButton"
-            android:layout_width="63dp"
-            android:layout_height="63dp"
-            android:layout_marginBottom="592dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="600"
             android:background="@drawable/gren_circle"
             android:contentDescription="Rekam suara"
             app:layout_constraintBottom_toBottomOf="parent"
