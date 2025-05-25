@@ -1,0 +1,80 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="buah"
+            type="com.example.app.model.Sayur" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:padding="10dp">
+
+        <!-- Gambar Buah -->
+        <ImageView
+            android:id="@+id/gambarSayur"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="150dp"
+            app:imageUrl="@{Sayur.gambarUrl}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- Tombol Putar Suara -->
+
+        <!-- Tombol Mikrofon -->
+        <LinearLayout
+            android:id="@+id/playAudioButton"
+            android:layout_width="199dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/gren_lengkung"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gambarSayur">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="25dp"
+                android:contentDescription="Play Audio"
+                android:src="@drawable/ic_play" />
+
+            <TextView
+                android:layout_width="91dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="18dp"
+                android:background="@drawable/lrmusic" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/micButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/gren_circle"
+            android:contentDescription="Rekam suara"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="100dp" />
+
+        <ImageView
+            android:id="@+id/micButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="Rekam suara"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="105dp"
+            android:background="@drawable/microfon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
