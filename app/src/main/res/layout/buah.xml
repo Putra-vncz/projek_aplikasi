@@ -1,0 +1,60 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <!-- Binding class dari data buah -->
+        <variable
+            name="buah"
+            type="com.example.app.model.Buah" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:padding="16dp">
+
+        <!-- Gambar Buah -->
+        <ImageView
+            android:id="@+id/gambarBuah"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="150dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:imageUrl="@{buah.gambarUrl}" />
+
+        <!-- Nama Buah -->
+        <TextView
+            android:id="@+id/namaBuah"
+            android:layout_width="200dp"
+            android:layout_height="51dp"
+            android:background="@drawable/lengkung_buah_sayur"
+            android:padding="8dp"
+            android:text="@{buah.nama}"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/gambarBuah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp" />
+
+        <!-- Bulatan Hijau -->
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/gren_circle"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="100dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
